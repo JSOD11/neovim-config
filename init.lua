@@ -26,10 +26,10 @@ require("lazy").setup({
 }, lazy_config)
 
 -- tab settings
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.softtabstop = 4
-opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
 
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
