@@ -11,3 +11,9 @@ map("i", "jk", "<ESC>")
 map("t", "<Esc>", [[<C-\><C-n>]])
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+
+-- Copy the full path of the current file to clipboard
+vim.keymap.set("n", "<leader>yp", function()
+  vim.fn.setreg("+", vim.fn.expand("%:p"))
+  print("Copied file path: " .. vim.fn.expand("%:p"))
+end, { desc = "Copy full file path" })
