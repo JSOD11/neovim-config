@@ -12,11 +12,11 @@ map("t", "<Esc>", [[<C-\><C-n>]])
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
--- Copy the full path of the current file to clipboard
+-- Copy the relative path of the current file to clipboard
 vim.keymap.set("n", "<leader>yp", function()
-  vim.fn.setreg("+", vim.fn.expand("%:p"))
-  print("Copied file path: " .. vim.fn.expand("%:p"))
-end, { desc = "Copy full file path" })
+  vim.fn.setreg("+", vim.fn.expand("%."))
+  print("Copied file path: " .. vim.fn.expand("%."))
+end, { desc = "Copy relative file path" })
 
 -- DAP (Debug Adapter Protocol) keybindings
 map("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>", { desc = "Toggle breakpoint" })
@@ -34,4 +34,11 @@ map("n", "<Down>", "<cmd>DapStepOver<cr>", { desc = "DAP: Step over" })
 map("n", "<Right>", "<cmd>DapStepInto<cr>", { desc = "DAP: Step into" })
 map("n", "<Left>", "<cmd>DapStepOut<cr>", { desc = "DAP: Step out" })
 map("n", "<Up>", "<cmd>lua require('dap').restart_frame()<cr>", { desc = "DAP: Restart frame" })
+
+-- For multi-cursor select next occurence.
+vim.g.VM_default_mappings = 0
+vim.g.VM_maps = {
+  ["Find Under"]        = "<C-l>",
+  ["Find Subword Under"]= "<C-l>",
+}
 
