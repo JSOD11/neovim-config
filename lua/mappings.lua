@@ -35,10 +35,3 @@ map("n", "<Right>", "<cmd>DapStepInto<cr>", { desc = "DAP: Step into" })
 map("n", "<Left>", "<cmd>DapStepOut<cr>", { desc = "DAP: Step out" })
 map("n", "<Up>", "<cmd>lua require('dap').restart_frame()<cr>", { desc = "DAP: Restart frame" })
 
--- For multi-cursor select next occurence.
-vim.g.VM_default_mappings = 0
-vim.g.VM_maps = {
-  ["Find Under"]        = "<C-l>",
-  ["Find Subword Under"]= "<C-l>",
-}
-
