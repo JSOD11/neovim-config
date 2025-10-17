@@ -15,21 +15,16 @@ dap.configurations.go = {
     type = "delve",
     name = "Debug",
     request = "launch",
-    program = "${file}",
+    program = "${workspaceFolder}",
+    cwd = "${workspaceFolder}",
   },
   {
     type = "delve",
-    name = "Debug test",
+    name = "Debug tests (package)",
     request = "launch",
     mode = "test",
-    program = "./${relativeFileDirname}",
-  },
-  {
-    type = "delve",
-    name = "Debug test (go.mod)",
-    request = "launch",
-    mode = "test",
-    program = "./${relativeFileDirname}",
+    program = "${workspaceFolder}/${relativeFileDirname}",
+    cwd = "${workspaceFolder}",
   },
 }
 
