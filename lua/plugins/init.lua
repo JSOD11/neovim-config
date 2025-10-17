@@ -110,6 +110,7 @@ return {
     end,
   },
 
+  -- Visual multi-select.
   {
     "mg979/vim-visual-multi",
     branch = "master",

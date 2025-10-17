@@ -14,8 +14,8 @@ map("t", "<Esc>", [[<C-\><C-n>]])
 
 -- Copy the relative path of the current file to clipboard
 vim.keymap.set("n", "<leader>yp", function()
-  vim.fn.setreg("+", vim.fn.expand("%."))
-  print("Copied file path: " .. vim.fn.expand("%."))
+  vim.fn.setreg("+", vim.fn.expand "%.")
+  print("Copied file path: " .. vim.fn.expand "%.")
 end, { desc = "Copy relative file path" })
 
 -- DAP (Debug Adapter Protocol) keybindings
