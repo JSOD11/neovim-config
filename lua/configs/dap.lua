@@ -28,22 +28,41 @@ dap.configurations.go = {
   },
 }
 
--- Java debugging with java-debug
-dap.adapters.java = function(callback)
-  callback {
-    type = "server",
-    host = "127.0.0.1",
-    port = 5005,
-  }
+-- Rust debugging with codelldb
+local codelldb_cmd = vim.fn.exepath "codelldb"
+if codelldb_cmd == "" then
+  codelldb_cmd = "codelldb"
 end
 
-dap.configurations.java = {
+dap.adapters.codelldb = {
+  type = "server",
+  port = "${port}",
+  executable = {
+    command = codelldb_cmd,
+    args = { "--port", "${port}" },
+  },
+}
+
+dap.configurations.rust = {
   {
-    type = "java",
-    request = "attach",
-    name = "Debug (Attach) - Remote",
-    hostName = "127.0.0.1",
-    port = 5005,
+    name = "Debug binary",
+    type = "codelldb",
+    request = "launch",
+    program = function()
+      return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/target/debug/", "file")
+    end,
+    cwd = "${workspaceFolder}",
+    stopOnEntry = false,
+    args = {},
+  },
+  {
+    name = "Debug tests (binary)",
+    type = "codelldb",
+    request = "launch",
+    program = function()
+      return vim.fn.input("Test binary: ", vim.fn.getcwd() .. "/target/debug/", "file")
+    end,
+    cwd = "${workspaceFolder}",
   },
 }
 
