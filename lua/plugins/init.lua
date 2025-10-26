@@ -124,9 +124,10 @@ return {
     end,
   },
 
-  -- Git blame.
+  -- Vim fugitive (git tools).
   {
-    "FabijanZulj/blame.nvim",
+    "tpope/vim-fugitive",
     lazy = false,
   },
+
 }

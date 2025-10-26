@@ -37,4 +37,10 @@ map("n", "<Up>", "<cmd>lua require('dap').restart_frame()<cr>", { desc = "DAP: R
 
 -- Git shortcuts.
 map("n", "<leader>gb", "<cmd>Git blame<cr>", { desc = "Toggle git blame" })
+map("n", "<leader>gd", "<cmd>Gdiffsplit!<cr>", { desc = "Resolve merge conflicts" })
+map("n", "<leader>gs", "<cmd>Git<cr>", { desc = "Git status" })
+map("n", "<leader>gh", "<cmd>diffget //2<cr>", { desc = "Get from left (target)" })
+map("n", "<leader>gl", "<cmd>diffget //3<cr>", { desc = "Get from right (merge)" })
+map("n", "[c", "[c", { desc = "Previous conflict" })
+map("n", "]c", "]c", { desc = "Next conflict" })
 
