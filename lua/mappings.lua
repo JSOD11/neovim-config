@@ -35,3 +35,6 @@ map("n", "<Right>", "<cmd>DapStepInto<cr>", { desc = "DAP: Step into" })
 map("n", "<Left>", "<cmd>DapStepOut<cr>", { desc = "DAP: Step out" })
 map("n", "<Up>", "<cmd>lua require('dap').restart_frame()<cr>", { desc = "DAP: Restart frame" })
 
+-- Git shortcuts.
+map("n", "<leader>gb", "<cmd>Git blame<cr>", { desc = "Toggle git blame" })
+

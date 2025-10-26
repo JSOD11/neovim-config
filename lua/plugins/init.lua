@@ -123,4 +123,10 @@ return {
       }
     end,
   },
+
+  -- Git blame.
+  {
+    "FabijanZulj/blame.nvim",
+    lazy = false,
+  },
 }
