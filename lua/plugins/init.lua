@@ -130,4 +130,10 @@ return {
     lazy = false,
   },
 
+  -- Java LSP (jdtls) with Bazel support.
+  {
+    "mfussenegger/nvim-jdtls",
+    ft = "java",
+  },
+
 }
