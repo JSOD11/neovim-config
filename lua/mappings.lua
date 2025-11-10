@@ -35,6 +35,12 @@ map("n", "<Right>", "<cmd>DapStepInto<cr>", { desc = "DAP: Step into" })
 map("n", "<Left>", "<cmd>DapStepOut<cr>", { desc = "DAP: Step out" })
 map("n", "<Up>", "<cmd>lua require('dap').restart_frame()<cr>", { desc = "DAP: Restart frame" })
 
+-- Window resizing with Leader + J/K/</>
+map("n", "<leader>K", "<cmd>resize +10<cr>", { desc = "Increase window height" })
+map("n", "<leader>J", "<cmd>resize -10<cr>", { desc = "Decrease window height" })
+map("n", "<leader><", "<cmd>vertical resize -10<cr>", { desc = "Decrease window width" })
+map("n", "<leader>>", "<cmd>vertical resize +10<cr>", { desc = "Increase window width" })
+
 -- Git shortcuts.
 map("n", "<leader>gb", "<cmd>Git blame<cr>", { desc = "Toggle git blame" })
 map("n", "<leader>gd", "<cmd>Gdiffsplit!<cr>", { desc = "Resolve merge conflicts" })
