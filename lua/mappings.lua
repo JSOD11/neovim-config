@@ -8,7 +8,11 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
 -- terminal: return to normal mode with <Esc>
-map("t", "<Esc>", [[<C-\><C-n>]])
+map("t", "<Esc><Esc>", [[<C-\><C-n>]])
+
+-- scroll the page without moving the cursor
+map("n", "J", "<C-e>", { desc = "Scroll down" })
+map("n", "K", "<C-y>", { desc = "Scroll up" })
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
@@ -49,4 +53,3 @@ map("n", "<leader>gh", "<cmd>diffget //2<cr>", { desc = "Get from left (target)"
 map("n", "<leader>gl", "<cmd>diffget //3<cr>", { desc = "Get from right (merge)" })
 map("n", "[c", "[c", { desc = "Previous conflict" })
 map("n", "]c", "]c", { desc = "Next conflict" })
-
