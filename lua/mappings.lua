@@ -10,6 +10,9 @@ map("i", "jk", "<ESC>")
 -- terminal: return to normal mode with <Esc>
 map("t", "<Esc><Esc>", [[<C-\><C-n>]])
 
+-- hover docs (replaces default K)
+map("n", "H", vim.lsp.buf.hover, { desc = "LSP hover" })
+
 -- scroll the page without moving the cursor
 map("n", "J", "<C-e>", { desc = "Scroll down" })
 map("n", "K", "<C-y>", { desc = "Scroll up" })
