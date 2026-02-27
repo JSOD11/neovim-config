@@ -43,6 +43,11 @@ dap.adapters.codelldb = {
   },
 }
 
+local rust_init_commands = {
+  "settings set target.process.thread.step-in-avoid-nodebug true",
+  "settings set target.process.thread.step-avoid-regexp ^(std::|core::|alloc::|tokio::|tracing::|futures::).*",
+}
+
 dap.configurations.rust = {
   {
     name = "Debug binary",
@@ -53,6 +58,7 @@ dap.configurations.rust = {
     end,
     cwd = "${workspaceFolder}",
     stopOnEntry = false,
+    initCommands = rust_init_commands,
     args = {},
   },
   {
@@ -63,6 +69,14 @@ dap.configurations.rust = {
       return vim.fn.input("Test binary: ", vim.fn.getcwd() .. "/target/debug/", "file")
     end,
     cwd = "${workspaceFolder}",
+    args = function()
+      local s = vim.fn.input("Test args (optional): ", "")
+      if s == nil or s == "" then
+        return {}
+      end
+      return vim.split(s, "%s+", { trimempty = true })
+    end,
+    initCommands = rust_init_commands,
   },
 }
 
