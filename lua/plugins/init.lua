@@ -17,6 +17,9 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
+    init = function()
+      vim.opt.rtp:append(vim.fn.stdpath "data" .. "/lazy/nvim-treesitter/runtime")
+    end,
     opts = {
       ensure_installed = {
         "vim",
