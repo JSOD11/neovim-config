@@ -11,7 +11,12 @@ map("i", "jk", "<ESC>")
 map("t", "<Esc><Esc>", [[<C-\><C-n>]])
 
 -- hover docs (replaces default K)
-map("n", "H", vim.lsp.buf.hover, { desc = "LSP hover" })
+map("n", "H", function()
+  vim.lsp.buf.hover {
+    border = "single",
+    max_width = 100,
+  }
+end, { desc = "LSP hover" })
 
 -- scroll the page without moving the cursor
 map("n", "J", "<C-e>", { desc = "Scroll down" })

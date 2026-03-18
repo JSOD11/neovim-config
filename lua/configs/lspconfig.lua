@@ -10,6 +10,10 @@ vim.diagnostic.config {
   },
 }
 
+vim.lsp.config("rust_analyzer", {
+  cmd = { "/opt/homebrew/opt/rustup/bin/rust-analyzer" },
+})
+
 local servers = { "html", "cssls", "gopls", "rust_analyzer", "ts_ls" }
 vim.lsp.enable(servers)
 
