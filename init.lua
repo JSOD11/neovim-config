@@ -35,10 +35,3 @@ require "autocmds"
 vim.schedule(function()
   require "mappings"
 end)
-
-vim.api.nvim_create_autocmd("User", {
-  pattern = "VeryLazy",
-  callback = function()
-    vim.keymap.set("n", "'", ":", { noremap = true, silent = false, desc = "CMD enter command mode" })
-  end,
-})

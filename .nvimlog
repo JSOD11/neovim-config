@@ -1,0 +1,7 @@
+WRN 2026-04-08T08:47:53.537 c/nvim.81530.0 server_start:199: Failed to start server: operation not permitted: /var/folders/p1/qh0ktyjs3cv1v4ph3pph2dbc0000gp/T/nvim.justin.odwyer/sKjnX6/nvim.85751.0
+WRN 2026-04-08T08:47:53.539 c/nvim.81530.0 server_start:199: Failed to start server: operation not permitted: /var/folders/p1/qh0ktyjs3cv1v4ph3pph2dbc0000gp/T/nvim.justin.odwyer/p9Jmjw/nvim.85753.0
+WRN 2026-04-08T08:48:06.238 c/nvim.81530.0 server_start:199: Failed to start server: operation not permitted: /var/folders/p1/qh0ktyjs3cv1v4ph3pph2dbc0000gp/T/nvim.justin.odwyer/lzq6uJ/nvim.86864.0
+WRN 2026-04-08T08:48:06.292 c/nvim.81530.0 server_start:199: Failed to start server: operation not permitted: /var/folders/p1/qh0ktyjs3cv1v4ph3pph2dbc0000gp/T/nvim.justin.odwyer/4fIZFa/nvim.86866.0
+WRN 2026-04-08T08:48:27.364 c/nvim.81530.0 server_start:199: Failed to start server: operation not permitted: /var/folders/p1/qh0ktyjs3cv1v4ph3pph2dbc0000gp/T/nvim.justin.odwyer/qRusxN/nvim.87875.0
+WRN 2026-04-08T08:48:55.596 c/nvim.81530.0 server_start:199: Failed to start server: operation not permitted: /var/folders/p1/qh0ktyjs3cv1v4ph3pph2dbc0000gp/T/nvim.justin.odwyer/SmJcvj/nvim.88683.0
+WRN 2026-04-08T08:48:55.596 c/nvim.81530.0 server_start:199: Failed to start server: operation not permitted: /var/folders/p1/qh0ktyjs3cv1v4ph3pph2dbc0000gp/T/nvim.justin.odwyer/cLnXfl/nvim.88684.0

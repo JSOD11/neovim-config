@@ -47,6 +47,15 @@ return {
     },
   },
 
+  {
+    "folke/which-key.nvim",
+    keys = function(_, keys)
+      return vim.tbl_filter(function(key)
+        return key ~= "'"
+      end, keys)
+    end,
+  },
+
   -- Autosave.
   {
     "pocco81/auto-save.nvim",
