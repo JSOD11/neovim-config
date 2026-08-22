@@ -14,7 +14,7 @@ vim.lsp.config("rust_analyzer", {
   cmd = { "/opt/homebrew/opt/rustup/bin/rust-analyzer" },
 })
 
-local servers = { "html", "cssls", "gopls", "rust_analyzer", "ts_ls" }
+local servers = { "html", "cssls", "gopls", "pyright", "ruff", "rust_analyzer", "ts_ls" }
 vim.lsp.enable(servers)
 
 -- read :h vim.lsp.config for changing options of lsp servers 

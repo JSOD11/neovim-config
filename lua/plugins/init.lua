@@ -30,6 +30,7 @@ return {
         "go",
         "gomod",
         "java",
+        "python",
         "rust",
         "bash",
       },
